@@ -27,7 +27,7 @@ const inSearchForm = async event => {
         'Sorry, there are no images matching your search query. Please try again.'
       );
       return;
-    } else if (data.totalHits <= 33) {
+    } else if (data.totalHits <= pixabayApi.per_page) {
       addArrows(data.hits);
 
       btnEl.style.display = 'none';
