@@ -29,7 +29,6 @@ const inSearchForm = async event => {
       return;
     } else if (data.totalHits <= pixabayApi.per_page) {
       addArrows(data.hits);
-
       btnEl.style.display = 'none';
     } else {
       addArrows(data.hits);
@@ -39,7 +38,6 @@ const inSearchForm = async event => {
       Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
     }
   } catch (error) {
-    alert('ERROR');
     console.log(error);
   }
 };
